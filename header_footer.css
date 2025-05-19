@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/* Хедер */
+.header {
+  width: 100%;
+  height: 200px;
+  background: -webkit-gradient(linear, left top, right top, from(#2c2c2c), color-stop(30%, #8b7500), color-stop(60%, #bfa100), to(#ffd700));
+  background: linear-gradient(to right, #2c2c2c 0%, #8b7500 30%, #bfa100 60%, #ffd700 100%);
+  border-bottom: 2px solid #000;
+}
+
+.header-inner {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 50px;
+}
+
+.header-inner .logo {
+  width: 150px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.header-inner .logo-img {
+  width: 150px;
+  height: 100px;
+}
+
+.header-inner .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.header-inner .nav-menu a .menu-button {
+  width: 140px;
+  height: 50px;
+  background-color: #000;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 30px;
+  -webkit-transition: all 0.3s ease, -webkit-transform 0.2s ease;
+  transition: all 0.3s ease, -webkit-transform 0.2s ease;
+  transition: all 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-inner .nav-menu a .menu-button:hover {
+  background-color: #FFD700;
+  color: #000;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  border: 2px solid #000;
+}
+
+.header-inner .burger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #FFD700;
+  background-color: #000;
+  padding: 8px 12px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+}
+
+.header .mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(44, 44, 44, 0.95);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: height 0.4s ease;
+  transition: height 0.4s ease;
+  z-index: 1000;
+}
+
+.header .mobile-menu a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 20px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.header .mobile-menu a:hover {
+  color: #FFCC00;
+}
+
+/* Футер */
+.footer {
+  width: 100%;
+  height: auto;
+  background: -webkit-gradient(linear, left top, right top, from(#2c2c2c), color-stop(30%, #8b7500), color-stop(60%, #bfa100), to(#ffd700));
+  background: linear-gradient(to right, #2c2c2c 0%, #8b7500 30%, #bfa100 60%, #ffd700 100%);
+  border-top: 2px solid #000;
+  padding: 20px 0;
+}
+
+.footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 50px;
+}
+
+.footer-inner a .footer-logo-img {
+  width: 150px;
+  height: 70px;
+}
+
+.footer-inner .footer-text {
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+}
+
+.footer-inner .footer-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-inner .footer-socials a .footer-btn {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-inner .footer-socials a .footer-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.footer-inner .footer-socials a .footer-btn .footer-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Медиазапросы */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 20px;
+  }
+  .header-inner .nav-menu {
+    display: none;
+  }
+  .header-inner .burger {
+    display: block;
+  }
+  .footer-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  .footer-inner .footer-logo,
+  .footer-inner .footer-text,
+  .footer-inner .footer-socials {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-inner .footer-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer-inner .footer-socials {
+    margin-top: 10px;
+  }
+}
+/*# sourceMappingURL=header_footer.css.map */

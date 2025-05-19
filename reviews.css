@@ -1,0 +1,121 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Контейнер отзывов */
+.reviews-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.reviews-container h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ffc107;
+}
+
+/* Слайды отзывов */
+.swiper-slide {
+  height: 100%;
+  max-height: 650px;
+  background: #111;
+  border: 1px solid #ffc107;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+  text-align: left;
+  width: auto; /* убираем фиксированную ширину */
+  max-width: none; /* убираем ограничение */
+  margin: 0; /* убираем auto-центрирование */
+  box-sizing: border-box;
+}
+
+/* Фото отзыва */
+.review-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+}
+
+/* Имя клиента */
+.review-name {
+  font-size: 20px;
+  color: #ffc107;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Текст отзыва */
+.review-text {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* Дата отзыва */
+.review-date {
+  font-size: 14px;
+  color: #888;
+  text-align: right;
+}
+
+/* Стрелки слайдера */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffc107;
+}
+
+.swiper-pagination-bullet {
+  background: #ffc107;
+}
+
+@media (max-width: 768px) {
+  .reviews-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .swiper-slide {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .review-img {
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+
+  .review-name {
+    font-size: 18px;
+  }
+
+  .review-text {
+    font-size: 14px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; /* прячем стрелки на маленьких экранах */
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-container {
+    padding: 0 10px;
+  }
+
+  .review-name {
+    font-size: 16px;
+  }
+
+  .review-text {
+    font-size: 13px;
+  }
+}

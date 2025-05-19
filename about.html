@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас</title>
+  <link rel="stylesheet" href="123_header_footer.css" />
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    h1, h2, h3 {
+      color: #facc15;
+      margin: 1rem 0;
+    }
+
+    .feature-grid, .principles-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .feature-grid, .principles-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .feature-card {
+      background: #111;
+      border: 2px solid #facc15;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 20px 30px rgba(250, 204, 21, 0.3);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 1rem;
+      color: #facc15;
+    }
+
+    .text-gray {
+      color: #d1d5db;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .history {
+      max-width: 800px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="main_123.html" class="logo">
+        <img src="photo/logo.svg" alt="Логотип" class="logo-img" />
+      </a>
+
+    <!-- Бургер и меню -->
+    <nav class="nav-menu">
+        <a href="yslugi.html"><button class="menu-button">Услуги</button></a>
+        <a href="team.html"><button class="menu-button">Команда</button></a>
+        <a href="reviews.html"><button class="menu-button">Отзывы</button></a>
+        <a href="contacts.html"><button class="menu-button">Контакты</button></a>
+        <a href="about.html"><button class="menu-button">О нас</button></a>
+        <a href="form.html"><button class="menu-button">Оформить заявку</button></a>
+      </nav>
+  
+      <!-- Иконка бургера -->
+      <div class="burger" id="burger"> ☰ </div>
+    </div>
+  
+    <!-- Мобильное выпадающее меню -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="yslugi.html">Услуги</a>
+      <a href="team.html">Команда</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="about.html">О нас</a>
+      <a href="form.html">Заявка</a>
+    </nav>
+  </header>
+
+  <!-- Контент -->
+  <div class="content">
+
+    <!-- Заголовок -->
+    <h1 class="fade-in">О нашей компании</h1>
+
+    <!-- Фичи -->
+    <div class="feature-grid fade-in">
+
+      <div class="feature-card">
+        <div class="icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h2>5 лет опыта</h2>
+        <p class="text-gray">Мы успешно работаем с 2019 года и помогаем клиентам достигать целей.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M9 17v-6a3 3 0 013-3h4m0 0l-5 5m5-5l-5-5"/>
+          </svg>
+        </div>
+        <h2>Индивидуальный подход</h2>
+        <p class="text-gray">Каждый клиент — это особенный проект с персональной стратегией.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 00-3-3.87M4 21v-2a4 4 0 013-3.87M16 3.13a4 4 0 010 7.75M8 3.13a4 4 0 000 7.75"/>
+          </svg>
+        </div>
+        <h2>20+ экспертов</h2>
+        <p class="text-gray">Наша команда — это профессионалы своего дела в разных сферах.</p>
+      </div>
+
+    </div>
+
+    <!-- История -->
+    <div class="history fade-in">
+      <h2>Наша история</h2>
+      <p class="text-gray">
+        Мы начинали как небольшая команда энтузиастов и выросли в успешную компанию с десятками реализованных проектов. 
+        Наша миссия — помогать клиентам достигать новых вершин.
+      </p>
+    </div>
+
+    <!-- Принципы -->
+    <div class="principles-grid fade-in">
+
+      <div class="feature-card">
+        <h3>Качество</h3>
+        <p class="text-gray">Мы гарантируем высокий стандарт услуг и максимальный результат.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Честность</h3>
+        <p class="text-gray">Прозрачность во всём: от цен до выполнения каждого этапа проекта.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Ответственность</h3>
+        <p class="text-gray">Берём на себя обязательства и доводим каждый проект до успеха.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  
+      <a href="main_gpt.html">
+        <img src="photo/logo.svg" alt="Логотип футера" class="footer-logo-img" />
+      </a>
+  
+      <div class="footer-text">
+        <div>Минск, ул. Свердлова 13а <br> Все права защищены. <br> Политика конфиденциальности</div>
+      </div>
+  
+      <div class="footer-socials">
+        <a href="https://www.youtube.com/" target="_blank">
+          <button class="footer-btn" aria-label="YouTube">
+            <img src="photo/youtube.svg" alt="YouTube" class="footer-icon" />
+          </button>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <button class="footer-btn" aria-label="Instagram">
+            <img src="photo/insta.svg" alt="Instagram" class="footer-icon" />
+          </button>
+        </a>
+        <a href="https://t.me/telegram" target="_blank">
+          <button class="footer-btn" aria-label="Telegram">
+            <img src="photo/tg.svg" alt="Telegram" class="footer-icon" />
+          </button>
+        </a>
+      </div>
+  
+    </div>
+  </footer> 
+
+  <script>
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+  
+    let menuOpen = false;
+  
+    burger.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+  
+      // Открыть меню
+      if (menuOpen) {
+        mobileMenu.style.height = "100vh";
+        burger.textContent = "✖"; // Меняем иконку на крестик
+      } else {
+        mobileMenu.style.height = "0";
+        burger.textContent = "☰"; // Возвращаем бургер
+      }
+    });
+  </script> 
+
+</body>
+</html>

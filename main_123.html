@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="header_footer.css" />
+  <link rel="stylesheet" href="main_123.css" />
+  <title>Главная страница</title>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="main_gpt.html" class="logo">
+        <img src="photo/logo.svg" alt="Логотип" class="logo-img" />
+      </a>
+
+    <!-- Бургер и меню -->
+    <nav class="nav-menu">
+        <a href="yslugi.html"><button class="menu-button">Услуги</button></a>
+        <a href="team.html"><button class="menu-button">Команда</button></a>
+        <a href="reviews.html"><button class="menu-button">Отзывы</button></a>
+        <a href="contacts.html"><button class="menu-button">Контакты</button></a>
+        <a href="about.html"><button class="menu-button">О нас</button></a>
+        <a href="form.html"><button class="menu-button">Заявка</button></a>
+      </nav>
+  
+      <!-- Иконка бургера -->
+      <div class="burger" id="burger"> ☰ </div>
+    </div>
+  
+    <!-- Мобильное выпадающее меню -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="yslugi.html">Услуги</a>
+      <a href="team.html">Команда</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="about.html">О нас</a>
+      <a href="form.html">Заявка</a>
+    </nav>
+  </header>
+
+  <!-- Основной Блок -->
+  <div class="section main-block">
+    <h2>Подбор авто с гарантией</h2>
+    <hr>
+    <p class="main-text">Подберём подержанный автомобиль с гарантией и без риска, проверим все документы и проведём
+      полную диагностику.</p>
+    <button class="main-button" onclick="location.href='form.html'">Оставить заявку</button>
+
+    <div class="car-slider">
+      <div class="car-slider-track">
+        <div class="car-slide">
+          <img src="photo/audi a4.webp" alt="Слайд 1">
+        </div>
+        <div class="car-slide">
+          <img src="photo/vw tiguan.webp" alt="Слайд 2">
+        </div>
+        <div class="car-slide">
+          <img src="photo/porsche 911.webp" alt="Слайд 3">
+        </div>
+      </div>
+    </div>
+    <p class="main-text"> Последние подобранные автомобили </p>
+  </div>
+
+  <div class="section">
+    <h1>Покупка б/у автомобиля — это риск</h1>
+    <hr>
+    <p>На вторичном рынке есть машины в залоге или угоне, со скрученным пробегом и после серьёзных ДТП. Встретить
+      честного продавца — большое везение.</p>
+  </div>
+
+  <!-- Блок с рисками при выборе авто -->
+  <div class="section photo-grid">
+    <div class="photo-item">
+      <img src="photo/history.webp" alt="Проверка истории">
+      <div class="overlay">Узнайте правду о прошлом автомобиля — пробег, ДТП, ограничения и число владельцев. Мы
+        тщательно проверяем каждый авто, чтобы вы покупали с уверенностью.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo/problem_with_documents.webp" alt="Документы">
+      <div class="overlay">Автомобиль в залоге, в угоне, во владении у юридических лиц — или участвовал в мошеннических
+        схемах. Все это может лишить вас и машины, и уплаченных денег</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo/dtp.webp" alt="Скрытые ДТП">
+      <div class="overlay">Иногда ДТП не фиксируются в базах, а продавцы тщательно маскируют следы аварии. Такой
+        автомобиль не защитит водителя и пассажиров в случае серьезного ДТП</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo/sostoyanie.webp" alt="Техническое состояние">
+      <div class="overlay">Редкое обслуживание и плохое топливо приводят к ускоренному износу систем машины, а главное —
+        ее двигателя. Вложения могут сравниться с ценой авто</div>
+    </div>
+  </div>
+
+  <!-- Команда -->
+  <div class="section">
+    <h2>Наша команда</h2>
+    <hr>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="photo/person1.webp" alt="Сотрудник 1">
+        <h3>Даниил Коваленко</h3>
+        <p>Специалист по выездным диагностикам</p>
+      </div>
+      <div class="team-card">
+        <img src="photo/person2.webp" alt="Сотрудник 2">
+        <h3>Антон Головин</h3>
+        <p>Менеджер по работе с клиентами</p>
+      </div>
+      <div class="team-card">
+        <img src="photo/person3.webp" alt="Сотрудник 3">
+        <h3>Александр Павлов</h3>
+        <p>Специалист по подбору авто</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Отзывы -->
+
+  <div class="section">
+    <h2>Отзывы наших клиентов</h2>
+    <hr>
+    <div class="slider">
+      <div class="slide">
+        <img src="photo/kia rio reviews.webp">
+        <div class="review-name">Екатерина Орлова</div>
+        <div class="stars">★★★★★</div>
+        <div class="review-text">
+          Бюджет: 9 500 $<br>
+          Подобранный авто: Kia Rio 2016 г.в.<br><br>
+          Добрый день! Спустя два месяца после покупки машины могу смело оставлять положительный отзыв. Обращаемся за
+          подбором уже второй раз, работой ребят довольна на 100%. Спасибо большое! </div>
+      </div>
+      <div class="slide">
+        <img src="photo/octavia reviews.webp">
+        <div class="review-name">Ярослав Белов</div>
+        <div class="stars">★★★★★</div>
+        <div class="review-text">
+          Бюджет: 10 000 $<br>
+          Подобранный авто: Skoda Octavia 2011 г.в.<br><br>
+          В итоге подбора, взяли Шкоду Октавию 2011 года (кузов А5, лифтбек). 1 валдаец, 132,000
+          пробег.
+          Из проблем только изношенные тормозные диски с колодками и сгнила защита поддона. Все эти косяки мне показали
+          при осмотре. Авто полностью в родной краске и не был ни в одном ПТД.</div>
+      </div>
+      <div class="slide">
+        <img src="photo/bmw f30 reviews.webp">
+        <div class="review-name">Максим Неяскин</div>
+        <div class="stars">★★★★★</div>
+        <div class="review-text">
+          Бюджет: 23 000 $<br>
+          Подобранный авто: BMW F30, 2016 г.в.<br><br>
+          Спасибо команде за отличный подход и быстрый поиск. Машину нашли в отличном состоянии.
+        </div>
+      </div>
+      <div class="slide">
+        <img src="photo/santa fe reviews.webp">
+        <div class="review-name">Иван Штакельберг</div>
+        <div class="stars">★★★★★</div>
+        <div class="review-text">
+          Бюджет: 22 600 $<br>
+          Подобранный авто: Hyundai Santa Fe, 2015 г.в<br><br>
+          Огромное спасибо экспертам, титанический труд, результат на 5+.
+          Эксперт Дамир, высочайший профи. Может просто и толково объяснить непонятки по объявлениям. Очень доволен!
+          Итоговое авто на 10/10, идеальное попадание.</div>
+      </div>
+      <div class="slide">
+        <img src="photo/bmw f30 reviews.webp">
+        <div class="review-name">Максим Неяскин</div>
+        <div class="stars">★★★★★</div>
+        <div class="review-text">
+          Бюджет: 2 980 000 ₽<br>
+          Подобранный авто: BMW F30, 2016 г.в.<br><br>
+          Спасибо команде за отличный подход и быстрый поиск. Машину нашли в отличном состоянии.
+        </div>
+      </div>
+    </div>
+    <div class="slider-buttons">
+      <button onclick="prevSlide()">Назад</button>
+      <button onclick="nextSlide()">Вперед</button>
+    </div>
+  </div>
+
+  <!-- Часто задаваемые вопросы -->
+  <div class="section">
+    <h2>Часто задаваемые вопросы</h2>
+    <hr>
+    <div class="faq-container">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">Сколько длится подбор авто?</div>
+        <div class="faq-answer">В среднем от 3 до 14 дней в зависимости от ваших требований.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">Вы проверяете авто на ДТП?</div>
+        <div class="faq-answer">Да, мы проверяем историю автомобиля по базам ГИБДД и проводим диагностику.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">Можно ли оформить услуги онлайн или обязательно приезжать в офис?</div>
+        <div class="faq-answer">Приезжать в офис необязательно. Сформировать запрос можно на сайте, либо обратившись на горячую линию после чего с клиентом связывается менеджер и более детально обсуждается заказ.
+        </div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">Может ли клиент корректировать заказ в ходе работы?</div>
+        <div class="faq-answer">Да, изменение критериев подбора возможно и в ходе подбора, т.к. могут изменяться и потребность клиента, и ситуация на рынке.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  
+      <a href="main_gpt.html">
+        <img src="photo/logo.svg" alt="Логотип футера" class="footer-logo-img" />
+      </a>
+  
+      <div class="footer-text">
+        <div>Минск, ул. Свердлова 13а <br> Все права защищены. <br> Политика конфиденциальности</div>
+      </div>
+  
+      <div class="footer-socials">
+        <a href="https://www.youtube.com/" target="_blank">
+          <button class="footer-btn" aria-label="YouTube">
+            <img src="photo/youtube.svg" alt="YouTube" class="footer-icon" />
+          </button>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <button class="footer-btn" aria-label="Instagram">
+            <img src="photo/insta.svg" alt="Instagram" class="footer-icon" />
+          </button>
+        </a>
+        <a href="https://t.me/telegram" target="_blank">
+          <button class="footer-btn" aria-label="Telegram">
+            <img src="photo/tg.svg" alt="Telegram" class="footer-icon" />
+          </button>
+        </a>
+      </div>
+  
+    </div>
+  </footer> 
+
+  <script src="main_page_burger.js"> </script>
+  <script src="reviews_main_page.js"> </script>
+  <script src="faq_toggle_main.js"> </script>
+  <script src="car_slayder_main.js"> </script>
+
+</body>
+
+</html>

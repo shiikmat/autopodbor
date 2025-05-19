@@ -1,0 +1,139 @@
+/* Основной фон */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  font-family: Arial, sans-serif;
+}
+
+/* Заголовок страницы */
+h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #ffc107;
+  margin-bottom: 40px;
+}
+
+/* Блок с командой */
+.team-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Контейнер для карточек сотрудников */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Карточки сотрудников */
+.team-member {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Вертикальное центрирование */
+  align-items: center;     /* Горизонтальное центрирование */
+  text-align: center;
+  padding: 20px;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  border-radius: 15px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.team-member:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 255, 0, 0.3);
+}
+
+.team-member:hover img {
+  transform: scale(1.1);
+}
+
+/* Стили для текста */
+.member-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.member-role {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 20px 10px;
+  }
+
+  .team-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .team-member {
+    border-radius: 10px;
+  }
+
+  .overlay {
+    padding: 15px;
+    opacity: 0;          /* Скрываем по умолчанию */
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .team-member.active .overlay {
+    opacity: 1;          /* Показываем при активном состоянии */
+    pointer-events: auto;
+  }
+
+  .member-name {
+    font-size: 16px;
+  }
+
+  .member-role {
+    font-size: 12px;
+  }
+
+  .team-member:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-member:hover img {
+    transform: none;
+  }
+}

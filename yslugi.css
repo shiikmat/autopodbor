@@ -1,0 +1,241 @@
+/* Делаем черный фон для всей страницы */
+body, html {
+  margin: 0;
+  padding: 0;
+  background: #000; /* черный фон по всей странице */
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Контент */
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* Блок "Мы проверяем" */
+.check-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.check-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ffc107;
+}
+
+.check-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.check-column {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.slide {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+  position: absolute;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: static;
+}
+
+.check-item {
+  background: #111;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffc107; /* желтая обводка */
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.5); /* желтая тень */
+}
+
+.check-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.text h3 {
+  font-size: 18px;
+  margin: 0 0 5px 0;
+  color: #ffc107;
+}
+
+.text p {
+  font-size: 14px;
+  color: #ccc;
+  margin: 0;
+}
+
+.car-image img {
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.5); /* желтая тень */
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrows button {
+  font-size: 20px;
+  cursor: pointer;
+  background: #222;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  padding: 8px;
+  color: #ffc107;
+  transition: background 0.3s ease;
+}
+
+.arrows button:hover {
+  background: #333;
+}
+
+/* Блок услуг */
+.services-section {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.services-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ffc107;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.service-card {
+  width: 300px;
+  background: #111;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: left;
+  border: 1px solid #ffc107; /* желтая обводка */
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.5); /* желтая тень */
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #ffc107;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.service-card ul li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 20px;
+  color: #ccc;
+}
+
+.service-card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ffc107;
+}
+
+.price {
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 18px;
+  color: #ffc107;
+}
+
+.order-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ffc107;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.order-btn:hover {
+  background: #e0a800;
+}
+
+@media (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .car-image,
+  .arrows {
+    display: none;
+  }
+
+  .check-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Центрируем элементы по горизонтали */
+    gap: 20px;
+  }
+
+  .check-column {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: static;
+  }
+
+  .slide {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    position: static !important;
+  }
+}

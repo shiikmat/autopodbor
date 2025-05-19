@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заявка на авто</title>
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="123_header_footer.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="main_123.html" class="logo">
+        <img src="photo/logo.svg" alt="Логотип" class="logo-img" />
+      </a>
+
+    <!-- Бургер и меню -->
+    <nav class="nav-menu">
+        <a href="yslugi.html"><button class="menu-button">Услуги</button></a>
+        <a href="team.html"><button class="menu-button">Команда</button></a>
+        <a href="reviews.html"><button class="menu-button">Отзывы</button></a>
+        <a href="contacts.html"><button class="menu-button">Контакты</button></a>
+        <a href="about.html"><button class="menu-button">О нас</button></a>
+        <a href="form.html"><button class="menu-button">Оформить заявку</button></a>
+      </nav>
+  
+      <!-- Иконка бургера -->
+      <div class="burger" id="burger"> ☰ </div>
+    </div>
+  
+    <!-- Мобильное выпадающее меню -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="yslugi.html">Услуги</a>
+      <a href="team.html">Команда</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="about.html">О нас</a>
+      <a href="form.html">Заявка</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Оставьте заявку на подбор автомобиля</h2>
+    <form id="carForm">
+        <input type="text" name="name" placeholder="Ваше ФИО" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <input type="email" name="email" placeholder="Электронная почта" required>
+        <input type="text" name="car" placeholder="Марка авто" required>
+        <input type="text" name="model" placeholder="Модель авто" required>
+      
+        <select name="service" required>
+          <option value="" disabled selected>Выберите услугу</option>
+          <option value="diagnostic">Выездная диагностика автомобиля</option>
+          <option value="specialist">Специалист на день</option>
+          <option value="selection">Подбор автомобиля под ключ</option>
+        </select>
+      
+        <button type="submit">Отправить заявку</button>
+      </form>
+      
+      <p id="successMessage" style="display: none;">Спасибо! Ваша заявка отправлена.</p>
+      
+  </div>
+
+  <script>
+    const form = document.getElementById('carForm'); // Находим нашу форму по ID
+const successMessage = document.getElementById('successMessage'); // Находим блок для сообщения
+
+// Слушаем событие "submit" (отправка формы)
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // Отключаем стандартную отправку (чтобы страница не перезагружалась)
+
+  // Тут ты можешь добавить код для отправки данных на сервер (например, fetch или AJAX)
+  // Сейчас просто покажем сообщение "Спасибо!"
+
+  successMessage.style.display = 'block'; // Показываем сообщение
+
+  form.reset(); // Очищаем все поля формы
+
+  // Через 3 секунды скрываем сообщение
+  setTimeout(() => {
+    successMessage.style.display = 'none';
+  }, 3000);
+});
+
+  </script>
+
+<footer class="footer">
+  <div class="footer-inner">
+
+    <a href="main_gpt.html">
+      <img src="photo/logo.svg" alt="Логотип футера" class="footer-logo-img" />
+    </a>
+
+    <div class="footer-text">
+      <div>Минск, ул. Свердлова 13а <br> Все права защищены. <br> Политика конфиденциальности</div>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://www.youtube.com/" target="_blank">
+        <button class="footer-btn" aria-label="YouTube">
+          <img src="photo/youtube.svg" alt="YouTube" class="footer-icon" />
+        </button>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <button class="footer-btn" aria-label="Instagram">
+          <img src="photo/insta.svg" alt="Instagram" class="footer-icon" />
+        </button>
+      </a>
+      <a href="https://t.me/telegram" target="_blank">
+        <button class="footer-btn" aria-label="Telegram">
+          <img src="photo/tg.svg" alt="Telegram" class="footer-icon" />
+        </button>
+      </a>
+    </div>
+
+  </div>
+</footer> 
+
+  <script>
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+  
+    let menuOpen = false;
+  
+    burger.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+  
+      // Открыть меню
+      if (menuOpen) {
+        mobileMenu.style.height = "100vh";
+        burger.textContent = "✖"; // Меняем иконку на крестик
+      } else {
+        mobileMenu.style.height = "0";
+        burger.textContent = "☰"; // Возвращаем бургер
+      }
+    });
+  </script>  
+
+</body>
+</html>

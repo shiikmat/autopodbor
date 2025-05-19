@@ -1,0 +1,94 @@
+/* Глобальные стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Меню-кнопки */
+  .menu-button {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-button:hover {
+    background-color: #e6c200;
+  }
+  
+  /* Форма */
+  .form-container {
+    max-width: 600px;
+    height: 550px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #000;
+    color: #FFD700;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-container form input,
+  .form-container form button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  .form-container form input {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .form-container form button {
+    background-color: #FFD700;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .form-container form button:hover {
+    background-color: #FFD700;
+  }
+  
+  /* Сообщение об успехе */
+  #successMessage {
+    margin-top: 15px;
+    color: #FFD700;
+  }  
+
+  .form-container form select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    appearance: none; /* Убираем стандартную стрелку */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FFD700" class="bi bi-chevron-down" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/> </svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+  }
+  
+  .form-container form select:focus {
+    outline: none;
+    background-color: #333;
+  }  

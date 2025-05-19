@@ -1,0 +1,262 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  h1, h2, h3 {
+    color: #facc15;
+    text-align: center;
+  }
+  .section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  hr {
+    border: 1px solid #facc15;
+    margin: 2rem 0;
+  }
+
+  /* Фото-блок */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  .photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+  .photo-item img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+  .photo-item .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #facc15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+word-wrap: break-word;
+overflow: auto;
+  }
+  .photo-item:hover img {
+    opacity: 0.5;
+  }
+  .photo-item:hover .overlay {
+    opacity: 1;
+    text-align: center;
+  }
+
+  /* Команда */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .team-card {
+    background: #111;
+    border: 2px solid #facc15;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .team-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 30px rgba(250, 204, 21, 0.3);
+  }
+  .team-card img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  /* Отзывы */
+  .slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    background: #111;
+    border: 2px solid #facc15;
+    border-radius: 1rem;
+    text-align: center;
+    transition: transform 0.5s ease;
+  }
+  .slide img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3);
+  }
+  .review-name {
+    color: #facc15;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  .stars {
+    color: #facc15;
+    margin: 0.5rem 0;
+  }
+  .review-text {
+    color: #d1d5db;
+    font-size: 1rem;
+  }
+  .slider-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .slider-buttons button {
+    background: #facc15;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  /* FAQ */
+  .faq-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  .faq-item {
+    background: #111;
+    border: 2px solid #facc15;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .faq-question {
+    color: #facc15;
+    font-weight: bold;
+  }
+  .faq-answer {
+    color: #d1d5db;
+    margin-top: 0.5rem;
+    display: none;
+  }
+
+  @media (min-width: 767px) {
+    .slide {
+      min-width: 33.33%;
+    }
+  }
+
+  /* Основной блок */
+.main-block {
+text-align: center;
+}
+
+.main-text {
+font-size: 1.2rem;
+color: #d1d5db;
+margin: 1rem 0 2rem;
+}
+
+.main-button {
+background: #facc15;
+color: #000;
+border: none;
+padding: 0.75rem 1.5rem;
+border-radius: 0.5rem;
+font-size: 1rem;
+cursor: pointer;
+font-weight: bold;
+margin-bottom: 2rem;
+}
+
+.main-button:hover {
+background: #eab308;
+}
+
+/* Слайдер авто */
+.car-slider {
+display: flex;
+overflow: hidden;
+border-radius: 1rem;
+border: 2px solid #facc15;
+}
+
+.car-slide {
+min-width: 100%;
+transition: transform 0.5s ease;
+}
+
+.car-slide img {
+width: 100%;
+height: auto;
+border-radius: 1rem;
+}
+
+.car-slider {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  /* aspect-ratio: 3 / 2; сохраняет пропорции, не нужен fixed height */
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 2px solid #facc15;
+  position: relative;
+}
+
+.car-slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 300%; /* 3 слайда */
+}
+
+.car-slide {
+min-width: 100%;
+box-sizing: border-box;
+}
+
+.car-slide img {
+width: 100%;
+height: auto;
+border-radius: 1rem;
+display: block;
+}
+
+@media (max-width: 767px) {
+  .car-slider {
+    width: 100%;
+    height: auto;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slide {
+    min-width: 100% !important;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+}

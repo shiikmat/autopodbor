@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="123_header_footer.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="main_123.html" class="logo">
+        <img src="photo/logo.svg" alt="Логотип" class="logo-img" />
+      </a>
+
+    <!-- Бургер и меню -->
+    <nav class="nav-menu">
+        <a href="yslugi.html"><button class="menu-button">Услуги</button></a>
+        <a href="team.html"><button class="menu-button">Команда</button></a>
+        <a href="reviews.html"><button class="menu-button">Отзывы</button></a>
+        <a href="contacts.html"><button class="menu-button">Контакты</button></a>
+        <a href="about.html"><button class="menu-button">О нас</button></a>
+        <a href="form.html"><button class="menu-button">Оформить заявку</button></a>
+      </nav>
+  
+      <!-- Иконка бургера -->
+      <div class="burger" id="burger"> ☰ </div>
+    </div>
+  
+    <!-- Мобильное выпадающее меню -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="yslugi.html">Услуги</a>
+      <a href="team.html">Команда</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="about.html">О нас</a>
+      <a href="form.html">Заявка</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Контент -->
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  
+      <a href="main_gpt.html">
+        <img src="photo/logo.svg" alt="Логотип футера" class="footer-logo-img" />
+      </a>
+  
+      <div class="footer-text">
+        <div>Минск, ул. Свердлова 13а <br> Все права защищены. <br> Политика конфиденциальности</div>
+      </div>
+  
+      <div class="footer-socials">
+        <a href="https://www.youtube.com/" target="_blank">
+          <button class="footer-btn" aria-label="YouTube">
+            <img src="photo/youtube.svg" alt="YouTube" class="footer-icon" />
+          </button>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <button class="footer-btn" aria-label="Instagram">
+            <img src="photo/insta.svg" alt="Instagram" class="footer-icon" />
+          </button>
+        </a>
+        <a href="https://t.me/telegram" target="_blank">
+          <button class="footer-btn" aria-label="Telegram">
+            <img src="photo/tg.svg" alt="Telegram" class="footer-icon" />
+          </button>
+        </a>
+      </div>
+  
+    </div>
+  </footer>  
+
+  <script>
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+  
+    let menuOpen = false;
+  
+    burger.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+  
+      // Открыть меню
+      if (menuOpen) {
+        mobileMenu.style.height = "100vh";
+        burger.textContent = "✖"; // Меняем иконку на крестик
+      } else {
+        mobileMenu.style.height = "0";
+        burger.textContent = "☰"; // Возвращаем бургер
+      }
+    });
+  </script>  
+
+</body>
+
+</html>
